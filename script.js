@@ -15,7 +15,7 @@ function retangulo(base ,altura) {
     return base * altura
 }
 function quadrado(lado){
-    return lado ** 2
+    return lado * lado
 }
 function trapezio(basemaior, basemenor, altura) {
     return (basemaior + basemenor) * altura / 2
@@ -29,7 +29,23 @@ do{
             let base = parseInt(prompt('digite a base'))
             let altura= parseInt(prompt('digite a altura'))
             alert(triangulo(base,altura))
-
+        break
+        case '2':
+            let base1 = parseInt(prompt('digite a base'))
+            let altura1 = parseInt(prompt('digite a altura'))
+            alert(retangulo(base1,altura1))
+            break
+            case '3':
+            let lado = parseInt(prompt('digite o lado'))
+            alert(quadrado(lado))
+            break
+            case '4':
+            let basema  = parseInt(prompt('qual sua base maior'))
+            let baseme  = parseInt(prompt('qual sua base menor'))
+            let altura2  = parseInt(prompt('qual sua altura'))
+            alert(trapezio(basema, baseme, altura2))
+            break
+            
     }
     opcao = prompt("Digite a opção desejada: \n 1 - Triângulo \n 2 - Retângulo \n 3 - Quadrado \n 4 - Trapézio \n 5 - Círculo \n 6 - Sair");
 } while(opcao != '6')
